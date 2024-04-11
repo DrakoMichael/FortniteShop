@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+body {
+  background-color: rgb(17, 16, 27);
+}
+
+#containerPrincipal {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background: linear-gradient(
+    0deg,
+    rgba(5, 0, 48, 0) 0%,
+    rgba(1, 0, 10, 0.411) 60%
+  );
+  position: relative;
+}
+#containerPrincipal h1 {
+  font-size: 6rem;
+  color: #dbd5e6;
+}
+
+#containerPrincipal p {
+  display: inline;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #ffffff;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(1, 0, 15, 0.527);
+  padding: 3px 60px;
+  border-radius: 10px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+}
+
+.containerItem {
+  box-shadow: 7px 11px 5px 1px rgba(0, 0, 0, 0.75);
+  width: 256px;
+  height: 256px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: stretch;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.containerItem h2 {
+  color: aliceblue;
+  /* background-color: #001231; */
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.containerItem p {
+  color: aliceblue;
+  /* background-color: #001231; */
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.containerImgName {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#preçoInfo {
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.616);
+  border-radius: 0px 0px 20px 0px;
+  font-weight: 700;
+}
+#preçoInfo h3 {
+  padding-right: 5px;
+}
+#preçoInfo img {
+  width: 2rem;
+}
+
+.imgBackground {
+  width: 100%;
+  height: 100%;
+}
+
+.container-noBundle {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+  padding: 1rem 0 1rem 0;
+  width: 100%;
+  height: auto;
+}
+.container-category {
+  width: 70%;
+  z-index: -1;
+}
+.itemsGroup {
+  flex-wrap: wrap;
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+.categoryName {
+  padding: 1rem 0 0 0;
+  color: #fff;
+  text-align: center;
+}
+.subategoryName {
+  color: #fff;
+  text-align: center;
+}
+.itemOfCategory {
+  position: relative;
+  width: 256px;
+  height: 256px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#imageItem {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -3;
+}
+.itemName {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  background-color: aliceblue;
+}
+.priceVbucks {
+  display: flex;
+  align-items: center;
+  z-index: 4;
+
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.616);
+  border-radius: 0px 0px 20px 0px;
+  font-weight: 700;
+}
+.priceVbucks img {
+  width: 30px;
+}
+
+@media (max-width: 900px) {
+  .itemOfCategory {
+    width: 200px;
+    height: 200px;
+  }
+  .itemsGroup {
+    align-items: center;
+    align-content: space-around;
+  }
+}
+@media (max-width: 600px) {
+  .itemOfCategory {
+    width: 156px;
+    height: 156px;
+  }
+
+  .itemsGroup {
+    align-items: center;
+    align-content: center;
+  }
+}
