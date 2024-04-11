@@ -1,7 +1,11 @@
-# FortniteShop
-(JS, HTML, CSS)(unofficial) website to shows the current fortnite store through an API
+## LINKS
 
-## 🔗 Links
-[![PREVIEW](https://img.shields.io/badge/visite%20o%20site-grey?style=for-the-badge&logo=javascript)](drakomichael.github.io/FortniteShop/)
+- [API USED(fortnite-api.com/)](https://fortnite-api.com/)
+- [twitter](https://drakomichael.github.io/FortniteShop/)
 
+## ABOUT
+This project was based on the Brazilian Portuguese language(if you understand JS this won't be a problem). You can easily change it right at the beginning of the code.
+Some comments are in that language, just delete them. 
+In the future I will redo it, removing all the comments and trying to leave them in English.
 
+![twitter](https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square)
