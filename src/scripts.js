@@ -1,13 +1,17 @@
-import itemBundle from "./itemClass.js";
-import { normalItem } from "./itemClass.js";
+export default function agruparPorCategoria(items) {
+    return items.reduce((agrupado, it) => {
+        const categoryName = it.getCategory();
+        
+        if (!agrupado[categoryName]) {
+            agrupado[categoryName] = [];
+        }
+        
+        agrupado[categoryName].push(it);
+        
+        return agrupado;
+    }, {});
+}
 
-export default function tratarItem(l) {
-    if (l.bundle) {
-        const var1 = new itemBundle(l);
-        console.log(var1);
-    }
-    if (!l.bundle) {
-        const var2 = new normalItem(l);
-        console.log(var2);
-    }
+export function exibirHtml(i) {
+    console.log(i);
 }

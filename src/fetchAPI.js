@@ -2,7 +2,9 @@
 // The following languages are supported by most endpoints:
 // ar / de / en / es / es-419 / fr / it / ja / ko / pl / pt-BR / ru / tr / zh-CN / zh-Hant
 
-import tratarItem from "./scripts.js";
+import itemClass from "./itemClass.js";
+import agruparPorCategoria from "./scripts.js";
+import exibirHtml from "./scripts.js";
 
 export default function fetchAPI(){
 
@@ -15,9 +17,20 @@ const apiUrl = `https://fortnite-api.com/v2/shop/br?language=${language}`;
         //to show raw API return:
         console.log(jsonData);
         const entries = jsonData.data.featured.entries;
-        entries.forEach(element => {
-            tratarItem(element);
+
+        let itensTemp = [];
+
+        const itensRetornado = entries.forEach(element => {
+            itensTemp.push(new itemClass(element));
         });
+
+        let OrdenedItens = agruparPorCategoria(itensTemp);
+        Object.keys(OrdenedItens).forEach(category => {
+          OrdenedItens[category].forEach(item => {
+              console.log(item);
+          });
+      });
+  
         
       })
       .catch((error) => {
