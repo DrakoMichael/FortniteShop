@@ -13,5 +13,5 @@ export default function agruparPorCategoria(items) {
 }
 
 export function exibirHtml(i) {
-    console.log(i);
+    console.log(i)
 }

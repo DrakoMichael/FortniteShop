@@ -24,14 +24,17 @@ const apiUrl = `https://fortnite-api.com/v2/shop/br?language=${language}`;
             itensTemp.push(new itemClass(element));
         });
 
-        let OrdenedItens = agruparPorCategoria(itensTemp);
-        Object.keys(OrdenedItens).forEach(category => {
-          OrdenedItens[category].forEach(item => {
-              console.log(item);
-          });
-      });
-  
-        
+       let organizeditens = [];
+       organizeditens.push(agruparPorCategoria(itensTemp));
+
+       Object.keys(organizeditens[0]).forEach(category => {
+        console.log(category + ":");
+        organizeditens[0][category].forEach(item => {
+            console.log(item);
+        });
+    });
+
+
       })
       .catch((error) => {
         console.error(error);
