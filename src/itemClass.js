@@ -5,10 +5,11 @@ class itemInterface {
 }
 
 export default class itemBundle extends itemInterface{
-    constructor(name, finalPrice, image) {
-        this.name = bundle.name;
-        this.finalPrice = finalPrice;
-        this.image = newDisplayAsset.materialInstances[0].images.Background;
+    constructor(item) {
+        super();
+        this.name = item.bundle.name;
+        this.finalPrice = item.finalPrice;
+        this.image = item.newDisplayAsset.materialInstances[0].images.Background;
       } 
 
       getName(){
@@ -23,11 +24,18 @@ export default class itemBundle extends itemInterface{
       }
 
 }
+
 export class normalItem extends itemInterface{
-    constructor(name, finalPrice, image) {
-      this.name = items[0].name;
-      this.finalPrice = finalPrice;
-      this.image = image;
+    constructor(item) {
+      super();
+      this.name = item.items[0].name;
+      this.finalPrice = item.finalPrice;
+
+      if(item.newDisplayAsset){
+        this.image = item.newDisplayAsset.materialInstances[0].images.Background;
+      } else {
+        this.image = item.items[0].images.icon;
+      }
     }
 
     getName(){

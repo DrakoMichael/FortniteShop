@@ -1,12 +1,13 @@
-// Importando o módulo itemClass
-import itemBundle from "./itemClass";
-import { normalItem } from "./itemClass";
+import itemBundle from "./itemClass.js";
+import { normalItem } from "./itemClass.js";
 
 export default function tratarItem(l) {
-    if (l instanceof itemBundle) {
-        console.log(l.getName());
+    if (l.bundle) {
+        const var1 = new itemBundle(l);
+        console.log(var1);
     }
-    if (l instanceof normalItem) {
-        console.log(l.getName());
+    if (!l.bundle) {
+        const var2 = new normalItem(l);
+        console.log(var2);
     }
 }
