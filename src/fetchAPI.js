@@ -23,16 +23,33 @@ const apiUrl = `https://fortnite-api.com/v2/shop/br?language=${language}`;
         const itensRetornado = entries.forEach(element => {
             itensTemp.push(new itemClass(element));
         });
+        console.log(itensTemp);
 
+        function createItemClass(item) {
+          let exportItem = new itemClass(item);
+          exportItem.finalPrice = item.finalPrice;
+          if(item.bundle) {
+            exportItem.image = item.bundle.image;
+            exportItem.name = item.bundle.name;
+          } else {
+            exportItem.image = item.items[0].name;
+            exportItem.name = item.bundle.name;
+          }
+          if(item.layout){
+            this.category = item.layout.category;
+          } else {
+            this.category = "uutro";
+          }
+
+          return exportItem;
+        }
+
+
+
+        //organizarPorCategoria
        let organizeditens = [];
        organizeditens.push(agruparPorCategoria(itensTemp));
-
-       Object.keys(organizeditens[0]).forEach(category => {
-        console.log(category + ":");
-        organizeditens[0][category].forEach(item => {
-            console.log(item);
-        });
-    });
+       console.log(organizeditens);
 
 
       })

@@ -5,36 +5,12 @@ class itemInterface {
   getCategory(){}
 }
 export default class itemClass extends itemInterface{
-    constructor(item){
+    constructor(name, finalPrice, category, image){
       super();
-      this.finalPrice = item.finalPrice;
-
-      if(item.bundle){
-        this.name = item.bundle.name;
-        if(item.layout){
-          this.category = item.layout.category;
-        } else {
-          this.category = "Destaque";
-        }
-      }
-
-      if(!item.bundle){
-
-        this.name = item.items[0].name;
-
-          if(item.layout){
-          this.category = item.layout.category;
-          } else {
-          this.category = "Destaque";
-          }
-
-          if(item.newDisplayAsset){
-           this.image = item.newDisplayAsset.materialInstances[0].images.Background;
-          } else {
-           this.image = item.items[0].images.icon;
-          }
-      }
-
+      this.name = name;
+      this.finalPrices = finalPrice;
+      this.category = category;
+      this.image = image;
     }
 
     getName(){
