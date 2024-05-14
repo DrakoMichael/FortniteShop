@@ -1,8 +1,8 @@
 class itemInterface {
-  getName(){}
-  getPrice(){}
-  getImage(){}
-  getCategory(){}
+  getName() {}
+  getPrice() {}
+  getImage() {}
+  getCategory() {}
 }
 export default class itemClass extends itemInterface{
     constructor(name, finalPrice, category, image){
@@ -12,19 +12,19 @@ export default class itemClass extends itemInterface{
       this.category = category;
       this.image = image;
     }
+  }
 
-    getName(){
-      return this.name;
-    }
-    getPrice(){
-      return this.finalPrice;
-    }
+  getName() {
+    return this.name;
+  }
+  getPrice() {
+    return this.finalPrice;
+  }
 
-    getImage() {
-      return this.image;
-    }
-    getCategory(){
-      return this.category;
-    }
-
+  getImage() {
+    return this.image;
+  }
+  getCategory() {
+    return this.category;
+  }
 }

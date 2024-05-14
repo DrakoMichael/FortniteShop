@@ -6,10 +6,9 @@ import itemClass from "./itemClass.js";
 import agruparPorCategoria from "./scripts.js";
 import exibirHtml from "./scripts.js";
 
-export default function fetchAPI(){
-
-const language = "pt-BR";
-const apiUrl = `https://fortnite-api.com/v2/shop/br?language=${language}`;
+export default function fetchAPI() {
+  const language = "pt-BR";
+  const apiUrl = `https://fortnite-api.com/v2/shop/br?language=${language}`;
 
     fetch(apiUrl)
       .then((response) => response.json())
@@ -55,9 +54,17 @@ const apiUrl = `https://fortnite-api.com/v2/shop/br?language=${language}`;
       })
       .catch((error) => {
         console.error(error);
+      let itensTemp = [];
+      entries.forEach((element) => {
+        itensTemp.push(new itemClass(element));
       });
 
+      let organizeditens = [];
+      organizeditens.push(agruparPorCategoria(itensTemp));
+
+      console.log(organizeditens[0]);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 }
-
-
-
