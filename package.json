@@ -1,0 +1,12 @@
+{
+  "name": "fortniteshop",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "- [API USED(fortnite-api.com/)](https://fortnite-api.com/)\r - [PREVIEW](https://drakomichael.github.io/FortniteShop/)",
+  "main": "main.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "",
+  "license": "ISC"
+}
