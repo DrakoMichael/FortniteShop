@@ -89,6 +89,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+
 }
 #preçoInfo {
   padding: 0.3rem;
@@ -129,7 +130,7 @@ body {
 }
 .container-category {
   width: 70%;
-  z-index: -1;
+  z-index: -1
 }
 .itemsGroup {
   flex-wrap: wrap;
@@ -155,40 +156,62 @@ body {
   overflow: hidden;
   border-radius: 10px;
 }
-#imageItem {
-  width: 100%;
-  position: absolute;
+.itemShadow {
   top: 0;
   left: 0;
-  z-index: -3;
+  width: 256px;
+  height: 256px;
+  z-index: 0;
+}
+#imageItem {
+  padding-top: 40px;
+  width: 110%;
+  position: absolute;
+  top: 0;
+  left: -10px;
+  z-index: -1;
+}
+.priceVbucks {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-left: 0rem;
+  align-items: start;
+  position: absolute;
+  top: -25px;
+  left: 9%;
+  z-index: -4;
+  color: rgba(255, 255, 255, 0.932);
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0px 0px 0px 0px;
+  font-weight: 900;
+  font-size: 105px;
+}
+.priceVbucks img {
+  margin: 0px;
+  top: -10px;
+  left: -50px;
+  position: absolute;
+  width: 120px;
+  opacity: 60%;
+  z-index: -1;
 }
 .itemName {
   position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
-  z-index: 3;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 2;
+}
+.itemNameBackground {
+  z-index: 0;
   background-color: aliceblue;
-}
-.priceVbucks {
-  display: flex;
-  align-items: center;
-  z-index: 4;
-
-  padding: 0.3rem;
-  display: flex;
-  align-items: center;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  color: rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, 0.616);
-  border-radius: 0px 0px 20px 0px;
-  font-weight: 700;
-}
-.priceVbucks img {
-  width: 30px;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
@@ -232,5 +255,8 @@ body {
   .container-category {
     width: 100%;
     z-index: -1;
+  }
+  .priceVbucks {
+    font-size: 73px;
   }
 }
