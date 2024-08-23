@@ -1,6 +1,7 @@
 
 import { itemBundle, itemNormal } from './itemModel.js';
 import { config } from './config.js';
+import { agrupar, putInHTMLNormal } from './insertItemModel.js';
 
 fetch(config.apiUrl + config.apiLanguage)
   .then((response) => response.json())
@@ -13,6 +14,8 @@ fetch(config.apiUrl + config.apiLanguage)
         new itemNormal(element).pull(element);
       }
     });
+    agrupar();
+    putInHTMLNormal();
   })
   .catch((error) => {
     console.error(error);

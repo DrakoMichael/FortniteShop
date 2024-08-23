@@ -1,4 +1,4 @@
-import { bundleBlock } from "./insertItemModel.js";
+import { bundleBlock, NormalBlock } from "./insertItemModel.js";
 
 export class itemBundle{
   constructor(item) {
@@ -65,6 +65,7 @@ export class itemNormal {
       colors: this.colors
     };
     ///
+    new NormalBlock().putInHTML(itemSaida);
   }
-}
+};
 

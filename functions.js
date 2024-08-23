@@ -10,3 +10,4 @@ export function hexToRGBA(hex, alpha) {
     // Retorna a cor no formato rgba
     return `rgba(${r},${g},${b},${alpha})`;
 };
+
