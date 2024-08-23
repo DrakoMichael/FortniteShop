@@ -49,14 +49,13 @@ export class itemNormal {
       this.colors = item.newDisplayAsset.materialInstances[0].colors;
     } else {
       this.colors = { 
-        a: "#000000",
-        b: "#000000"
+        Background_Color_A: "#111111",
+        Background_Color_B: "#111111"
       };
     }
   }
 
   pull(){
-    //console.log(this.item);
     const itemSaida = {
       category: this.category,
       nome: this.nome,
