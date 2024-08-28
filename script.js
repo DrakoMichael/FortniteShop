@@ -1,7 +1,6 @@
-
-import { itemBundle, itemNormal } from './itemModel.js';
-import { config } from './config.js';
-import { agrupar, putInHTMLNormal } from './insertItemModel.js';
+import { itemBundle, itemNormal } from './models/itemModel.js';
+import { config } from './models/config.js';
+import { agrupar, putInHTMLNormal } from './models/insertItemModel.js';
 
 fetch(config.apiUrl + config.apiLanguage)
   .then((response) => response.json())

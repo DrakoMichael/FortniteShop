@@ -12,7 +12,6 @@ export class bundleBlock {
         const containerItemUnique = document.createElement("div");
         containerItemUnique.classList.add("itemOfCategory");
         containerInsert.appendChild(containerItemUnique);
-
             
         containerItemUnique.style.border = "2px solid #" + item.colors.a;
           
@@ -95,8 +94,6 @@ export function putInHTMLNormal() {
         containerInsert.appendChild(containeritemsGroup);
 
         items.forEach((item) => {
-
-
             let colorOne;
             let colorTwo;
             if (item.colors.Background_Color_A === item.colors.Background_Color_B) {
@@ -106,7 +103,6 @@ export function putInHTMLNormal() {
                 colorTwo = item.colors.Background_Color_A;
                 colorOne = item.colors.Background_Color_B;
             }
-
             
             const containerItemUnique = document.createElement("div");
             containerItemUnique.classList.add("itemOfCategory");
